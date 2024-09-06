@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home(){
 
     //MUDANDO O TÍTULO DA PÁGINA!!!
     document.title = "Home";
+
+    const navigate = useNavigate();
 
     useEffect(() => {
       console.log("Executando sempre!!!"); 
@@ -29,6 +32,7 @@ export default function Home(){
         })
         .catch(error => {
           console.error(error);
+          navigate("/error");
         });
 
     },[]);
