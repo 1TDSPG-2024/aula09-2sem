@@ -58,19 +58,19 @@ export default function EditarProdutos(){
           <form onSubmit={handleSubmit}>
             <div>
               <label>Nome:</label>
-              <input type="text" name="nome" value={produto?.nome}  onChange={(e)=> setProdEditar({...prodEditar, nome:e.target.value})} />
+              <input type="text" name="nome" value={prodEditar?.nome}  onChange={(e)=> setProdEditar({...prodEditar, nome:e.target.value})} />
             </div>
             <div>
               <label>Preço:</label>
-              <input type="number" name="preco" value={produto?.preco} onChange={(e)=> setProdEditar({...prodEditar, nome:e.target.value})}/>
+              <input type="number" name="preco" value={prodEditar?.preco} onChange={(e)=> setProdEditar({...prodEditar, nome:e.target.value})}/>
             </div>
             <div>
               <label>Descrição:</label>
-              <textarea name="desc" value={produto?.desc} onChange={(e)=> setProdEditar({...prodEditar, nome:e.target.value})}/>
+              <textarea name="desc" value={prodEditar?.desc} onChange={(e)=> setProdEditar({...prodEditar, nome:e.target.value})}/>
             </div>
             <div>
               <figure>
-                <img src={produto?.imagem} alt={produto?.desc} />
+                <img src={prodEditar?.imagem} alt={prodEditar?.desc} />
               </figure>
             </div>
             <div>
